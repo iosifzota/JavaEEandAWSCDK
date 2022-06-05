@@ -38,16 +38,16 @@ public class EjbCdkStack extends Stack {
         //         .build();
 //        final Asset earFile = Asset.Builder.create(this, "Ear")
 //        		.path("").build();
-        final Asset dockerFile = Asset.Builder.create(this, "Dockerfile")
-        		.path("Dockerfile").build();
+        final Asset zipFile = Asset.Builder.create(this, "Project")
+        		.path("dockerfile_and_ear.zip").build();
         
         final String appName = "MyEarApp";
         final CfnApplication app = CfnApplication.Builder.create(this, "Application")
         		.applicationName(appName).build();
         
         final SourceBundleProperty sourceBundleProperty = SourceBundleProperty.builder()
-        		.s3Bucket(dockerFile.getS3BucketName())
-        		.s3Key(dockerFile.getS3ObjectKey())
+        		.s3Bucket(zipFile.getS3BucketName())
+        		.s3Key(zipFile.getS3ObjectKey())
         		.build();
         
         final CfnApplicationVersion appVersionProps = CfnApplicationVersion.Builder.create(this, "AppVersion")
