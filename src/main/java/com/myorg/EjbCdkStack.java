@@ -39,7 +39,7 @@ public class EjbCdkStack extends Stack {
 //        final Asset earFile = Asset.Builder.create(this, "Ear")
 //        		.path("").build();
         final Asset zipFile = Asset.Builder.create(this, "Project")
-        		.path("dockerfile_and_ear.zip").build();
+        		.path("dockerfile_ear_with_rds_v03.zip").build();
         
         final String appName = "MyEarApp";
         final CfnApplication app = CfnApplication.Builder.create(this, "Application")
