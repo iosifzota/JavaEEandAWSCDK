@@ -14,3 +14,5 @@ RUN echo 'create-jdbc-connection-pool --user admin --passwordfile /opt/payara/pa
 RUN echo 'create-jdbc-resource --user admin --passwordfile /opt/payara/passFile --connectionpoolid test-pool-005 --enabled=true jdbc/myCliRes' >> $POSTBOOT_COMMANDS
 
 COPY Lab4Ear001_with_RDS_db.ear $DEPLOY_DIR
+
+ENV DEPLOY_PROPS=--contextroot=/
