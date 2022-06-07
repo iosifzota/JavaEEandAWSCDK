@@ -1,3 +1,7 @@
+The only command needed is the following:
+`cdk deploy --profile AWS_PROFILE_NAME`
+
+Below is the standard ReadMe of CDK projects.
 # Welcome to your CDK Java project!
 
 This is a blank project for CDK development with Java.
